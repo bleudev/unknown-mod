@@ -3,13 +3,13 @@
 	"id": "unknown-mod",
 	"version": "${version}",
 	"name": "Unknown mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod which provides some unknown items and blocks to use in your videos. Influenced by YouTube Shorts \"Guess the item/block/mob in 60 seconds\" ",
 	"authors": [
-		"Me!"
+		"bleudev"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/bleudev-unknown-mod",
+		"sources": "https://github.com/bleudev/unknown-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/unknown-mod/icon.png",
@@ -31,9 +31,9 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.1",
+		"minecraft": ">=1.21.1",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": ">=0.115.1"
 	},
 	"suggests": {
 		"another-mod": "*"
