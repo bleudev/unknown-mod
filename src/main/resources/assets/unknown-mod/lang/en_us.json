@@ -1,5 +1,7 @@
 {
   "itemGroup.unknown_item": "Unknown items",
   "item.unknown-mod.unknown_item": "Unknown item",
-  "item.unknown-mod.unknown_item_2": "Unknown item"
+  "item.unknown-mod.unknown_item_2": "Unknown item",
+  "block.unknown-mod.unknown_block": "Unknown block",
+  "block.unknown-mod.unknown_block_2": "Unknown block"
 }

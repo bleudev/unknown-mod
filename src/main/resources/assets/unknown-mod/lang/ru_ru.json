@@ -1,5 +1,7 @@
 {
   "itemGroup.unknown_item": "Неизвестные предметы",
   "item.unknown-mod.unknown_item": "Неизвестный предмет",
-  "item.unknown-mod.unknown_item_2": "Неизвестный предмет"
+  "item.unknown-mod.unknown_item_2": "Неизвестный предмет",
+  "block.unknown-mod.unknown_block": "Неизвестный блок",
+  "block.unknown-mod.unknown_block_2": "Неизвестный блок"
 }

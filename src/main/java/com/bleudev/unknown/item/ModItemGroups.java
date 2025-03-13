@@ -13,24 +13,27 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final RegistryKey<ItemGroup> UNKNOWN_ITEMS_GROUP_KEY = createRegistryKey("unknown_items");
-    public static final ItemGroup UNKNOWN_ITEMS_GROUP = createGroup(ModItems.UNKNOWN_ITEM, "itemGroup.unknown_item");
+    public static final ItemGroup UNKNOWN_ITEMS_GROUP = registerGroup(UNKNOWN_ITEMS_GROUP_KEY, ModItems.UNKNOWN_ITEM, "itemGroup.unknown_item");
 
     private static RegistryKey<ItemGroup> createRegistryKey(String name) {
         return RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(UnknownMod.MOD_ID, name));
     }
 
-    private static ItemGroup createGroup(Item icon, String displayName) {
-        return FabricItemGroup.builder()
+    private static ItemGroup registerGroup(RegistryKey<ItemGroup> key, Item icon, String displayName) {
+
+        UnknownMod.LOGGER.debug("Building item group " + displayName);
+        ItemGroup itemGroup = FabricItemGroup.builder()
                 .icon(() -> new ItemStack(icon))
                 .displayName(Text.translatable(displayName))
                 .build();
-    }
+        UnknownMod.LOGGER.debug("Builded item group " + displayName);
 
-    private static void registerGroup(RegistryKey<ItemGroup> key, ItemGroup itemGroup) {
+        UnknownMod.LOGGER.debug("Registering item group " + displayName);
         Registry.register(Registries.ITEM_GROUP, key, itemGroup);
+        UnknownMod.LOGGER.debug("Registered item group " + displayName);
+        return itemGroup;
     }
 
     public static void register() {
-        registerGroup(UNKNOWN_ITEMS_GROUP_KEY, UNKNOWN_ITEMS_GROUP);
     }
 }
