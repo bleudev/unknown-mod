@@ -1,4 +1,4 @@
-package com.bleudev.unknown;
+package com.bleudev.unknown.client;
 
 import net.fabricmc.api.ClientModInitializer;
 

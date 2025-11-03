@@ -4,9 +4,7 @@
 	"version": "${version}",
 	"name": "Unknown mod",
 	"description": "A mod which provides some unknown items and blocks to use in your videos. Influenced by YouTube Shorts \"Guess the item/block/mob in 60 seconds\" ",
-	"authors": [
-		"bleudev"
-	],
+	"authors": ["bleudev"],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/bleudev-unknown-mod",
 		"sources": "https://github.com/bleudev/unknown-mod"
@@ -19,23 +17,15 @@
 			"com.bleudev.unknown.UnknownMod"
 		],
 		"client": [
-			"com.bleudev.unknown.UnknownModClient"
+          "com.bleudev.unknown.client.UnknownModClient"
 		]
 	},
 	"mixins": [
-		"unknown-mod.mixins.json",
-		{
-			"config": "unknown-mod.client.mixins.json",
-			"environment": "client"
-		}
+		"unknown-mod.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.10",
-		"minecraft": ">=1.21.1",
-		"java": ">=21",
-		"fabric-api": ">=0.115.1"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"fabricloader": ">=${loader_version}",
+		"minecraft": ">=${minecraft_version} <${max_exclusive_minecraft_version}",
+		"fabric-api": ">=${fabric_version}"
 	}
 }
